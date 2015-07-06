@@ -4,17 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{377FDF6D-A276-4B87-921B-CBF86643D9A3}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{B2FFF6BF-5BF0-4C4C-AF7B-3F49144A7C0F}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>OrderDemo1</RootNamespace>
-    <AssemblyName>OrderDemo1</AssemblyName>
+    <RootNamespace>OrderDemo1.DAL</RootNamespace>
+    <AssemblyName>OrderDemo1.DAL</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -42,20 +39,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\OrderDemo1.BLL\OrderDemo1.BLL.csproj">
       <Project>{61393463-8e0c-47c8-81a1-8b487b9fa1be}</Project>
       <Name>OrderDemo1.BLL</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\OrderDemo1.DAL\OrderDemo1.DAL.csproj">
-      <Project>{b2fff6bf-5bf0-4c4c-af7b-3f49144a7c0f}</Project>
-      <Name>OrderDemo1.DAL</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
