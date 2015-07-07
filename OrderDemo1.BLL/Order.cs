@@ -6,10 +6,13 @@ using System.Threading.Tasks;
 
 namespace OrderDemo1.BLL
 {
-    public class Order
+    public interface IOrder { }
+
+    public class Order : IOrder
     {
+        public int Id { get; set; }
         public Customer Customer { get; set; }
-        public List<LineItem> LineItems { get; set; }
+        public virtual ICollection<LineItem> LineItems { get; set; }
         public decimal TotalCost { get; set; }
 
         public Order() {}

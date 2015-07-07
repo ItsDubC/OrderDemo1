@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace OrderDemo1.BLL
 {
-    public class Customer
+    public interface ICustomer {}
+
+    public class Customer : ICustomer
     {
+        public int Id { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
 
