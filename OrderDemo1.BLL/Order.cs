@@ -17,7 +17,7 @@ namespace OrderDemo1.BLL
 
         public Order() {}
 
-        public Order(Customer customer, List<LineItem> lineItems)
+        public Order(Customer customer, ICollection<LineItem> lineItems)
         {
             Customer = customer;
             LineItems = lineItems;
